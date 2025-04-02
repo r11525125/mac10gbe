@@ -1,0 +1,52 @@
+{
+    "args": [
+        "-o",
+        "mac10gbe",
+        "--base_path",
+        "C:\\Efinity\\2024.2\\project\\new_project\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "ethernet",
+            "name": "efx_mac10gbe",
+            "version": "1.0"
+        }
+    ],
+    "conf": {
+        "CUT_THRU_STORE_FWD": "1'b1",
+        "INTER_PACKET_GAP": "4'd12",
+        "MTU_FRAME_LENGTH": "14'd1518",
+        "MAC_SOURCE_ADDRESS": "48'd0",
+        "ENABLE_BROADCAST_FILTER": "1'b1",
+        "REG_WIDTH": "6'd32",
+        "TXFIFO_DEPTH": "512",
+        "AXIS_DATA_WIDTH": "64",
+        "DETECT_LINK_FAULT": "1'b1"
+    },
+    "output": {
+        "external_source_source": [
+            "mac10gbe\\mac10gbe_tmpl.vhd",
+            "mac10gbe\\mac10gbe.sv",
+            "mac10gbe\\mac10gbe_tmpl.sv",
+            "mac10gbe\\mac10gbe_define.svh"
+        ],
+        "external_testbench_testbench": [
+            "mac10gbe\\Testbench\\mac10gbe.sv",
+            "mac10gbe\\Testbench\\mac10gbe_define.svh"
+        ],
+        "external_testbench_ncsim": [
+            "mac10gbe\\Testbench\\ncsim\\mac10gbe.sv"
+        ],
+        "external_testbench_synopsys": [
+            "mac10gbe\\Testbench\\synopsys\\mac10gbe.sv"
+        ],
+        "external_testbench_aldec": [
+            "mac10gbe\\Testbench\\aldec\\mac10gbe.sv"
+        ],
+        "external_testbench_modelsim": [
+            "mac10gbe\\Testbench\\modelsim\\mac10gbe.sv"
+        ]
+    },
+    "sw_version": "2024.2.294",
+    "generated_date": "2025-03-26T06:50:02.662780+00:00"
+}
